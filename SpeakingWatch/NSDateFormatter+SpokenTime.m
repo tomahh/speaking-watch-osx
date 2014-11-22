@@ -1,11 +1,3 @@
-//
-//  NSDateFormatter+SpokenTime.m
-//  SpeakingWatch
-//
-//  Created by Thomas Duplomb on 21/11/14.
-//  Copyright (c) 2014 Thomas Duplomb. All rights reserved.
-//
-
 #import "NSDateFormatter+SpokenTime.h"
 
 @implementation NSDateFormatter (SpokenTime)
