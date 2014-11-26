@@ -25,11 +25,12 @@
     NSArray *hourStrings = @[@"TWELVE", @"ONE", @"TWO", @"THREE", @"FOUR", @"FIVE",
                              @"SIX", @"SEVEN", @"EIGHT", @"NINE", @"TEN", @"ELEVEN"];
     NSDateComponents *components = [self.calendar components:NSCalendarUnitHour|NSCalendarUnitMinute fromDate:date];
-    NSInteger hour = [components hour] % 12;
+    NSInteger hour = [components hour];
     
     if ([components minute] >= 35) {
         hour += 1;
     }
+    hour %= 12;
     return hourStrings[hour];
 }
 
