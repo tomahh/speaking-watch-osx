@@ -2,6 +2,4 @@
 
 @interface SpeakingWatchView : ScreenSaverView
 
-@property (nonatomic, strong) NSGradient *background;
-
 @end

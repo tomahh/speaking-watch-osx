@@ -3,13 +3,14 @@
 #import "NSDateFormatter+SpokenTime.h"
 
 @interface SpeakingWatchView ()
+@property (nonatomic, strong) NSGradient *background;
 @property (nonatomic, strong) SWTimeView *timeView;
 @end
 
 NSRect squareInFrame(NSRect containerFrame, CGFloat scale)
 {
     CGFloat side = MIN(containerFrame.size.width, containerFrame.size.height) * scale;
-    CGFloat padding = (containerFrame.size.height - side) * (1/10.f);
+    CGFloat padding = (containerFrame.size.height - side) * (1/6.f);
     
     return NSMakeRect((containerFrame.size.width / 2) - (side / 2), containerFrame.size.height - side - padding,
                       side, side);
