@@ -111,19 +111,14 @@ void registerFontWithPath(NSString *fontPath)
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
-//    [[NSColor greenColor] set];
-//    [NSBezierPath fillRect:[self bounds]];
      CGContextRef context =
          (CGContextRef)[[NSGraphicsContext currentContext] graphicsPort];
     
-    // Set the text matrix.
+    // Reset the text matrix.
     CGContextSetTextMatrix(context, CGAffineTransformIdentity);
     
-    // Create a path which bounds the area where you will be drawing text.
-    // The path need not be rectangular.
+    // Create a path which bounds the area where text will be drawn.
     CGMutablePathRef path = CGPathCreateMutable();
-    
-    // In this simple example, initialize a rectangular path.
     CGPathAddRect(path, NULL, [self bounds]);
     
     CFAttributedStringRef attrString =
