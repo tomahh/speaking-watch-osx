@@ -3,23 +3,23 @@
 #import "NSDateFormatter+SpokenTime.h"
 
 @interface SpeakingWatchView ()
+@property (nonatomic, strong) IBOutlet NSPanel *optionPanel;
+
 @property (nonatomic, strong) NSGradient *background;
 @property (nonatomic, strong) SWTimeView *timeView;
 @end
 
-NSRect squareInFrame(NSRect containerFrame, CGFloat scale)
-{
+NSRect squareInFrame(NSRect containerFrame, CGFloat scale) {
     CGFloat side = MIN(containerFrame.size.width, containerFrame.size.height) * scale;
     CGFloat padding = (containerFrame.size.height - side) * (1/6.f);
     
-    return NSMakeRect((containerFrame.size.width / 2) - (side / 2), containerFrame.size.height - side - padding,
+    return NSMakeRect((containerFrame.size.width / 2.f) - (side / 2.f), containerFrame.size.height - side - padding,
                       side, side);
 }
 
 @implementation SpeakingWatchView
 
-- (instancetype)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
-{
+- (instancetype)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview {
     self = [super initWithFrame:frame isPreview:isPreview];
     if (self) {
         NSColor *startingColor = [NSColor colorWithCalibratedWhite:0.03 alpha:1];
@@ -33,36 +33,37 @@ NSRect squareInFrame(NSRect containerFrame, CGFloat scale)
     return self;
 }
 
-- (void)startAnimation
-{
+- (void)startAnimation {
     [super startAnimation];
 }
 
-- (void)stopAnimation
-{
+- (void)stopAnimation {
     [super stopAnimation];
 }
 
-- (void)drawRect:(NSRect)rect
-{
+- (void)drawRect:(NSRect)rect {
     [super drawRect:rect];
     [self.background drawInRect:[self bounds] angle:270.f]; // top to bottom
 }
 
-- (void)animateOneFrame
-{
+- (void)animateOneFrame {
     [self.timeView animateOneFrame];
     return;
 }
 
-- (BOOL)hasConfigureSheet
-{
+- (BOOL)hasConfigureSheet {
     return NO;
 }
 
-- (NSWindow*)configureSheet
-{
-    return nil;
+- (NSWindow*)configureSheet {
+    if (!self.optionPanel) {
+        [NSBundle loadNibNamed:@"ConfigureSheet" owner:self];
+    }
+    return self.optionPanel;
+}
+
+- (IBAction)closeConfig:(id)sender {
+    [[NSApplication sharedApplication] endSheet:self.optionPanel];
 }
 
 @end

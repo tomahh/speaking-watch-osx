@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CA70A211AA21F14007EC8CA /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CA70A201AA21F14007EC8CA /* ConfigureSheet.xib */; };
+		9CA70A261AA22B88007EC8CA /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA70A241AA22B88007EC8CA /* thumbnail.png */; };
+		9CA70A271AA22B88007EC8CA /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA70A251AA22B88007EC8CA /* thumbnail@2x.png */; };
 		9CBC181E1A1E915200C9F293 /* SpeakingWatchView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CBC181D1A1E915200C9F293 /* SpeakingWatchView.h */; };
 		9CBC18201A1E915200C9F293 /* SpeakingWatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC181F1A1E915200C9F293 /* SpeakingWatchView.m */; };
 		9CEC57BE1A1F6A4300806B4D /* SWTimeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CEC57BC1A1F6A4300806B4D /* SWTimeView.h */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9CA70A201AA21F14007EC8CA /* ConfigureSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigureSheet.xib; sourceTree = "<group>"; };
+		9CA70A241AA22B88007EC8CA /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		9CA70A251AA22B88007EC8CA /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
 		9CBC18181A1E915200C9F293 /* SpeakingWatch.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeakingWatch.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBC181C1A1E915200C9F293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CBC181D1A1E915200C9F293 /* SpeakingWatchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeakingWatchView.h; sourceTree = "<group>"; };
@@ -39,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9CA70A281AA22E16007EC8CA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9CA70A201AA21F14007EC8CA /* ConfigureSheet.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		9CBC180E1A1E915200C9F293 = {
 			isa = PBXGroup;
 			children = (
@@ -60,11 +74,12 @@
 			children = (
 				9CBC181D1A1E915200C9F293 /* SpeakingWatchView.h */,
 				9CBC181F1A1E915200C9F293 /* SpeakingWatchView.m */,
-				9CBC181B1A1E915200C9F293 /* Supporting Files */,
 				9CEC57BC1A1F6A4300806B4D /* SWTimeView.h */,
 				9CEC57BD1A1F6A4300806B4D /* SWTimeView.m */,
 				9CEC57C21A1FAB3800806B4D /* NSDateFormatter+SpokenTime.h */,
 				9CEC57C31A1FAB3800806B4D /* NSDateFormatter+SpokenTime.m */,
+				9CA70A281AA22E16007EC8CA /* Resources */,
+				9CBC181B1A1E915200C9F293 /* Supporting Files */,
 			);
 			path = SpeakingWatch;
 			sourceTree = "<group>";
@@ -72,6 +87,8 @@
 		9CBC181B1A1E915200C9F293 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9CA70A241AA22B88007EC8CA /* thumbnail.png */,
+				9CA70A251AA22B88007EC8CA /* thumbnail@2x.png */,
 				9CEC57C01A1F722800806B4D /* futrfw.ttf */,
 				9CBC181C1A1E915200C9F293 /* Info.plist */,
 			);
@@ -148,7 +165,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA70A271AA22B88007EC8CA /* thumbnail@2x.png in Resources */,
+				9CA70A211AA21F14007EC8CA /* ConfigureSheet.xib in Resources */,
 				9CEC57C11A1F722800806B4D /* futrfw.ttf in Resources */,
+				9CA70A261AA22B88007EC8CA /* thumbnail.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
